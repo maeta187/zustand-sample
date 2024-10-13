@@ -1,5 +1,5 @@
-import { createContext } from 'react';
-import { createStore } from 'zustand';
+import { createContext } from 'react'
+import { createStore } from 'zustand'
 
 export interface BearProps {
   bears: number
@@ -13,12 +13,12 @@ export type BearStore = ReturnType<typeof createBearStore>
 
 export const createBearStore = (initProps?: Partial<BearProps>) => {
   const DEFAULT_PROPS: BearProps = {
-    bears: 0,
+    bears: 0
   }
   return createStore<BearState>()((set) => ({
     ...DEFAULT_PROPS,
     ...initProps,
-    addBear: () => set((state) => ({ bears: ++state.bears })),
+    addBear: () => set((state) => ({ bears: ++state.bears }))
   }))
 }
 
