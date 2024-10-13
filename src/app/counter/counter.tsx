@@ -1,6 +1,6 @@
 'use client'
 
-import { useCounterStore } from '@/store/store'
+import { useCounterStore } from '@/store'
 
 export const Counter = () => {
   // clientコンポーネントで使用する
